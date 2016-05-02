@@ -3,5 +3,6 @@
 = @event.description
 
 .buttons
-  =link_to "Back", root_path, class: 'btn btn-primary'
-  =link_to "Delete", "#", class: 'btn btn-danger'
+  = link_to "Back", root_path, class: 'btn btn-primary'
+  = link_to "Edit", edit_event_path, class: 'btn btn-primary'
+  = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger'

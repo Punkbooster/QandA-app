@@ -9,11 +9,10 @@ class EventsController < ApplicationController
   end
 
   def show
-
   end
 
   def create
-    @event = Event.new(params.require(:event).permit(:title, :description))
+    @event = Event.new(event_params)
 
     if @event.save
       redirect_to @event
@@ -23,12 +22,19 @@ class EventsController < ApplicationController
   end
 
   def update
+    if @event.update(event_params)
+      redirect_to @event
+    else
+      render 'edit'
+    end
   end
 
   def edit
   end
 
   def destroy
+    @event.destroy
+    redirect_to root_path
   end
 
   private
@@ -38,6 +44,6 @@ class EventsController < ApplicationController
   end
 
   def event_params
-
+    params.require(:event).permit(:title, :description)
   end
 end
