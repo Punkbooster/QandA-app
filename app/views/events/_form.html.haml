@@ -1,0 +1,7 @@
+= simple_form_for @event do |f|
+  = f.input :title, label: 'Title of the event'
+  = f.input :description, label: 'Events description'
+  = f.submit
+
+.buttons
+  =link_to "Cancel", root_path, class: 'btn btn-danger'

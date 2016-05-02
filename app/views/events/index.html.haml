@@ -1,1 +1,5 @@
-%h1 This is events index
+%h1 All events:
+- @events.each do |event|
+  %p= link_to event.title, event, class: 'button'
+.buttons
+  = link_to "Create event", new_event_path, class: 'btn btn-primary'
