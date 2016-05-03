@@ -1,6 +1,5 @@
-%h1 This is show
-= @event.title
-= @event.description
+%h1= @event.title
+%p= @event.description
 
 .buttons
   = link_to "Back", root_path, class: 'btn btn-primary'
