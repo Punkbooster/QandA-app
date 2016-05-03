@@ -1,0 +1,5 @@
+= question.content
+
+.buttons
+	= link_to "Edit", edit_event_question_path(question.event, question), class: "button"
+	= link_to "Delete", [question.event, question], method: :delete, data: {confirm: "Are you sure?"}

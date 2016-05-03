@@ -1,6 +1,10 @@
 %h1= @event.title
 %p= @event.description
 
+= render @event.questions
+
+= render 'questions/form'
+
 .buttons
   = link_to "Back", root_path, class: 'btn btn-primary'
   = link_to "Edit", edit_event_path, class: 'btn btn-primary'
