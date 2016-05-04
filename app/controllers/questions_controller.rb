@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = @event.questions.create(question_params)
+    @question.user_id = current_user.id if current_user
     if @question.save
       redirect_to event_path(@event)
     else

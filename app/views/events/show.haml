@@ -1,8 +1,10 @@
 %h1= @event.title
 %p= @event.description
 
+%h1 Questions:
 = render @event.questions
 
+%h1 Submit a question:
 = render 'questions/form'
 
 .buttons

@@ -1,4 +1,6 @@
-= question.content
+%h4
+	= question.content
+%i Submitted by: #{question.user.email}
 
 .buttons
 	= link_to "Edit", edit_event_question_path(question.event, question), class: "button"
