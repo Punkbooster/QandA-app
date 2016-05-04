@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     redirect_to event_path(@event)
-	end
+  end
 
   private
 
