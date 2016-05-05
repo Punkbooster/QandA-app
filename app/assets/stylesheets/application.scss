@@ -29,6 +29,10 @@ $highlight: #73e298;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "roboto", sans-serif;
+}
+
 .clearfix:before, .clearfix:after {
 	content: " ";
 	display: table;
@@ -44,4 +48,32 @@ $highlight: #73e298;
   max-width: 90%;
 }
 
+a{
+  color: black !important;
+  line-height: 1 !important;
+  &:hover{
+    color: none;
+    text-decoration: none;
+  }
+}
+
 //- - - - - - - - - - Header Styles - - - - - - - - - - -
+
+#top_header {
+  padding: 1.5em 0;
+  .logo {
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+  #main_nav {
+    float: right;
+    font-size: 1em;
+    padding-top: 0.1em;
+    a {
+      margin-left: 1em;
+      color: $secondary !important;
+    }
+  }
+}
