@@ -29,7 +29,9 @@ class QuestionsController < ApplicationController
   end
 
   def upvote
-    @question.upvote_by current_user
+    session[:voting_id] = request.remote_ip
+    voter = Session.find_or_create_by(ip: session[:voting_id])
+    @question.upvote_by voter
     redirect_to event_path(@event)
   end
 
