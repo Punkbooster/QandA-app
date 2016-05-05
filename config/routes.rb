@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :clients
 
   devise_for :users
-  root 'events#index'
+  root 'home#index'
 
   namespace :admin do
     devise_for :admins
