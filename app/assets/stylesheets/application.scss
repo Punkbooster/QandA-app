@@ -17,8 +17,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+//- - - - - - - - - - Variables - - - - - - - - - - -
+
+$main: #252529;
+$secondary: #8b8b9f;
+$highlight: #73e298;
+
+//- - - - - - - - - - Global Styles - - - - - - - - - - -
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
 .wrapper {
   width: 1440px;
   margin: 0 auto;
   max-width: 90%;
 }
+
+//- - - - - - - - - - Header Styles - - - - - - - - - - -
