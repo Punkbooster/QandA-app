@@ -1,0 +1,13 @@
+%h1= @event.title
+%p= @event.description
+
+%h1 Questions:
+= render @event.questions
+
+%h1 Submit a question:
+= render 'questions/form'
+
+.buttons
+  = link_to "Back", root_path, class: 'btn btn-primary'
+  = link_to "Edit", edit_event_path, class: 'btn btn-primary'
+  = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger'
