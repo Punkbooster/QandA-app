@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :find_event, only: [:create, :edit, :update, :destroy]
-  before_action :find_question, only: [:edit, :update, :destroy]
+  before_action :find_event, only: [:create, :edit, :update, :destroy, :upvote]
+  before_action :find_question, only: [:edit, :update, :destroy, :upvote]
 
   def create
     @question = @event.questions.create(question_params)
@@ -25,6 +25,11 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
+    redirect_to event_path(@event)
+  end
+
+  def upvote
+    @question.upvote_by current_user
     redirect_to event_path(@event)
   end
 
