@@ -7,5 +7,5 @@ class Question < ActiveRecord::Base
 
   def score
     self.get_upvotes.size
-  end	
+  end
 end

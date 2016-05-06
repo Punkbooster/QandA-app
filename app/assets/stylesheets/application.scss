@@ -22,6 +22,7 @@
 $main: #252529;
 $secondary: #8b8b9f;
 $highlight: #73e298;
+$text: #3b3e4e;
 
 //- - - - - - - - - - Global Styles - - - - - - - - - - -
 
@@ -30,7 +31,8 @@ $highlight: #73e298;
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  color: $text;
 }
 
 .clearfix:before, .clearfix:after {
@@ -49,7 +51,7 @@ body {
 }
 
 a{
-  color: black !important;
+  color: $text !important;
   line-height: 1 !important;
   &:hover{
     color: none;
@@ -71,9 +73,22 @@ a{
     float: right;
     font-size: 1em;
     padding-top: 0.1em;
+    .sign_up {
+      border: 2px solid $highlight;
+      padding: .35em;
+    }
     a {
       margin-left: 1em;
       color: $secondary !important;
     }
   }
+}
+
+//- - - - - - - - - - Top Styles - - - - - - - - - - -
+
+.top_text {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
 }

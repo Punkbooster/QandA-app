@@ -6,20 +6,20 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     %link{href: "https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Roboto:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,700", :rel => "stylesheet", :type => "text/css"}/
   %body
     %header#top_header.clearfix
       .wrapper
         .logo
-          =link_to "Q&A platform", root_path
+          = link_to "Q&A platform", root_path
         %nav#main_nav
           -if user_signed_in?
-            = link_to "My Events", events_path
-            = link_to "New Event", new_event_path
-            = link_to "Sign Out", destroy_user_session_path, method: :delete
+            = link_to 'My Events', events_path
+            = link_to 'New Event', new_event_path
+            = link_to 'Sign Out', destroy_user_session_path, method: :delete
           -else
-            = link_to "Log In", new_user_session_path
-            = link_to "Sign Up", new_user_registration_path
+            = link_to 'Sign Up', new_user_registration_path, class: 'sign_up'
+            = link_to 'Log In', new_user_session_path
     = yield
     %p.notice= notice
     %p.alert= alert
