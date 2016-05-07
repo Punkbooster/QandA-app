@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
     @question.user_id = current_user.id if current_user
     respond_to do |format|
       format.html { redirect_to event_path(@event) }
-      format.js # render questions/create.js.erb
+      format.js { render layout: false } # render questions/create.js.erb
     end
   end
 
@@ -26,7 +26,7 @@ class QuestionsController < ApplicationController
     @question.destroy
     respond_to do |format|
       format.html { redirect_to event_path(@event) }
-      format.js # JavaScript response
+      format.js { render layout: false } # JavaScript response
     end
   end
 

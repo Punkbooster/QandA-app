@@ -1,3 +1,3 @@
-console.log("Heloot")
-alert("Hello")
-// $('#questions').html("<%= j render @event.questions %>");
+$('#questions').append("<%= j render partial: @question %>");
+$('#question_content').val('');
+// question_content is an id created by rails
