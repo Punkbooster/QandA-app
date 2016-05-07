@@ -8,9 +8,10 @@
         Submitted #{time_ago_in_words(@event.created_at)} ago
         = link_to "Edit", edit_event_path, class: 'buttons'
         = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'buttons'
-        = link_to "View description", "#", class: 'buttons'
+        = link_to "View description", "#", id: 'description-link', class: 'buttons'
       %br
-      %p= @event.description
+      %p#description
+        = @event.description
 
     %section#question_section
       %h1.event_count

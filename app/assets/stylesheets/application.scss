@@ -38,6 +38,7 @@ body {
 a{
   color: $text !important;
   line-height: 1 !important;
+  text-decoration: none;
   &:hover{
     color: none;
     text-decoration: none;
@@ -104,6 +105,9 @@ a{
   .date {
       text-align: right;
       padding-top: 1em;
+  }
+  #description {
+    display: none;
   }
 }
 
