@@ -1,11 +1,14 @@
 %h1= @event.title
 %p= @event.description
 
-%h1 Questions:
-= render @event.questions
+%section#question_section
+  %h1 Questions:
+  #questions
+    = render @event.questions
 
-%h1 Submit a question:
-= render 'questions/form'
+  #question-form
+    %h1 Submit a question:
+    = render 'questions/form'
 
 .buttons
   = link_to "Back", root_path, class: 'btn btn-primary'

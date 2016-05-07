@@ -5,10 +5,9 @@ class QuestionsController < ApplicationController
   def create
     @question = @event.questions.create(question_params)
     @question.user_id = current_user.id if current_user
-    if @question.save
-      redirect_to event_path(@event)
-    else
-      render 'events/show'
+    respond_to do |format|
+      format.html { redirect_to event_path(@event) }
+      format.js # render questions/create.js.erb
     end
   end
 
@@ -25,7 +24,10 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to event_path(@event)
+    respond_to do |format|
+      format.html { redirect_to event_path(@event) }
+      format.js # JavaScript response
+    end
   end
 
   def upvote

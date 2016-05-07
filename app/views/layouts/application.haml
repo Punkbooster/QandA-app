@@ -20,6 +20,7 @@
           -else
             = link_to 'Sign Up', new_user_registration_path, class: 'sign_up'
             = link_to 'Log In', new_user_session_path
-    = yield
-    %p.notice= notice
-    %p.alert= alert
+    .wrapper
+      = yield
+      %p.notice= notice
+      %p.alert= alert

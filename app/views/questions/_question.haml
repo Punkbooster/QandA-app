@@ -1,10 +1,7 @@
 %h4
 	= question.content
-%i Submitted by: #{question.user.email}
-= link_to "", like_event_question_path(@event, question), method: :put,class:'glyphicon glyphicon-thumbs-up'
-= question.score
-= 'Vote'.pluralize(question.score)
+
 
 .buttons
 	= link_to "Edit", edit_event_question_path(question.event, question), class: "button"
-	= link_to "Delete", [question.event, question], method: :delete, data: {confirm: "Are you sure?"}
+	= link_to "Delete", [question.event, question], method: :delete, data: {confirm: "Are you sure?"}, remote: true, class: 'delete-question'
