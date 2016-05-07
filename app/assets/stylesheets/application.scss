@@ -7,6 +7,7 @@ $main: #252529;
 $secondary: #8b8b9f;
 $highlight: #73e298;
 $text: #3b3e4e;
+$border-color: #e3e3e3;
 
 //- - - - - - - - - - Global Styles - - - - - - - - - - -
 
@@ -47,6 +48,14 @@ a{
   margin: 0 auto;
   width: 45%;
 }
+.buttons {
+  border: 1px solid $highlight;
+  padding: .5em 1em;
+  border-radius: 0.2em;
+  text-decoration: none;
+  color: $highlight !important;
+}
+
 
 //- - - - - - - - - - Header Styles - - - - - - - - - - -
 
@@ -80,4 +89,34 @@ a{
   margin: 0 auto;
   text-align: center;
   font-size: 1.5em;
+}
+
+//- - - - - - - - - - Event Section - - - - - - - - - - -
+
+.title_section {
+  .title {
+    border-bottom: 1px solid $border-color;
+    color: $highlight;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    padding: 0 0 20px 0;
+  }
+  .date {
+      text-align: right;
+      padding-top: 1em;
+  }
+}
+
+//- - - - - - - - - - Question Section - - - - - - - - - - -
+
+#question_section {
+  .event_count {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid $border-color;
+  }
+  #question_content {
+    padding:1em 4em 2em 4em;
+    border-bottom: 1px solid $border-color;
+  }
 }

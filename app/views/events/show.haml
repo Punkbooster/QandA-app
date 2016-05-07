@@ -1,16 +1,27 @@
-%h1= @event.title
-%p= @event.description
+.row
+  .col-lg-2
+  .col-lg-8
+    %section.title_section
+      %h1.title
+        = @event.title
+      %p.date
+        Submitted #{time_ago_in_words(@event.created_at)} ago
+        = link_to "Edit", edit_event_path, class: 'buttons'
+        = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'buttons'
+        = link_to "View description", "#", class: 'buttons'
+      %br
+      %p= @event.description
 
-%section#question_section
-  %h1 Questions:
-  #questions
-    = render @event.questions
+    %section#question_section
+      %h1.event_count
+        = @event.questions.count
+        ='Question'.pluralize(@event.questions.count)
+      #questions
+        = render @event.questions
 
-  #question-form
-    %h1 Submit a question:
-    = render 'questions/form'
+      #question-form
+        %h1 Submit a question:
+        = render 'questions/form'
 
-.buttons
-  = link_to "Back", root_path, class: 'btn btn-primary'
-  = link_to "Edit", edit_event_path, class: 'btn btn-primary'
-  = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger'
+    = link_to "Edit", edit_event_path, class: 'btn btn-primary'
+    = link_to "Delete", event_path, method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger'
