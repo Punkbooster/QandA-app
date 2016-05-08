@@ -1,4 +1,6 @@
-class Admin::QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
+  before_action :authenticate_admin!
+
   before_action :find_event, only: [:create, :edit, :update, :destroy, :upvote]
   before_action :find_question, only: [:edit, :update, :destroy, :upvote]
 
