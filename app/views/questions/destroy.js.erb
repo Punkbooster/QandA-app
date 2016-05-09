@@ -1,1 +1,3 @@
-$('#questions').html('<%= escape_javascript(render partial: @question) %>');
+$('#delete_question').bind('ajax:success', function() {
+        $(this).closest('#question_container').fadeOut();
+});
