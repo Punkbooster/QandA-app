@@ -8,6 +8,7 @@ $secondary: #8b8b9f;
 $highlight: #73e298;
 $text: #3b3e4e;
 $border-color: #e3e3e3;
+$white_opaque: rgba(250, 250, 250, .3);
 
 //- - - - - - - - - - Global Styles - - - - - - - - - - -
 
@@ -18,6 +19,11 @@ $border-color: #e3e3e3;
 body {
   font-family: "Open Sans", sans-serif;
   color: $text;
+  background: -webkit-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #1D976C 10%, #93F9B9 90%); /* W3C */
 }
 
 .clearfix:before, .clearfix:after {
@@ -35,6 +41,16 @@ body {
   max-width: 90%;
 }
 
+.container {
+  width: 50%;
+  max-width: 750px;
+  margin: 3em auto 0 auto;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.3);
+  box-shadow: 0 0 4px 4px rgba(0,0,0,.03);
+  background: $white_opaque;
+}
+
 a{
   color: $text !important;
   line-height: 1 !important;
@@ -49,6 +65,7 @@ a{
   margin: 0 auto;
   width: 45%;
 }
+
 .buttons {
   border: 1px solid $highlight;
   padding: .5em 1em;
@@ -57,10 +74,29 @@ a{
   color: $highlight !important;
 }
 
+.links {
+  display: block;
+  margin: 1em auto;
+  text-align: center;
+  font-size: 1.5em;
+  a {
+    transition: all .4s ease-in-out;
+    color: white !important;
+    text-decoration: underline;
+    padding: 8px;
+    border-radius: 15px;
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}
+
 
 //- - - - - - - - - - Header Styles - - - - - - - - - - -
 
 #top_header {
+  background-color: white;
   padding: 1.5em 0;
   .logo {
     float: left;
@@ -89,7 +125,7 @@ a{
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 //- - - - - - - - - - Event Section - - - - - - - - - - -
@@ -122,5 +158,39 @@ a{
   #question_container {
     padding:1em 4em 2em 4em;
     border-bottom: 1px solid $border-color;
+  }
+}
+
+//- - - - - - - - - - Index Events Section - - - - - - - - - - -
+
+section#index_events {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(250,250,250, .3);
+  }
+  .index_row {
+    border-bottom: 1px solid rgba(250,250,250, .3);
+  }
+  .event_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 1.5em 0 1.5em 0;
+    a {
+    	text-decoration: none;
+    	color: white !important;
+    	transition: all .4s ease-in-out;
+    	&:hover {
+    		opacity: 0.4;
+    		border-radius: 15px;
+    		padding: 10px;
+        background: black;
+    	}
+    }
   }
 }
