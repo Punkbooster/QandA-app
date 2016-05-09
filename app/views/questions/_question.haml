@@ -2,9 +2,11 @@
 	%p
 		= question.content
 
+	#votes
 		= link_to "", like_event_question_path(@event, question), method: :put,class:'glyphicon glyphicon-thumbs-up'
 		= question.score
 		= 'Vote'.pluralize(question.score)
 
-	= link_to "Edit", edit_event_question_path(question.event, question), class: "button"
-	= link_to "Delete", [question.event, question], method: :delete, data: {confirm: "Are you sure?"}, remote: true, id: 'delete_question'
+	.links
+		= link_to "Edit", edit_event_question_path(question.event, question), class: "button"
+		= link_to "Delete", [question.event, question], method: :delete, data: {confirm: "Are you sure?"}, remote: true, id: 'delete_question'

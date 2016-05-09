@@ -20,8 +20,5 @@
       = render @event.questions
 
     #question-form
-      %h1 Submit a question:
+      %h1 New Question
       = render 'questions/form'
-
-  = link_to 'Edit', edit_event_path, class: 'btn btn-primary'
-  = link_to 'Delete', event_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger'
