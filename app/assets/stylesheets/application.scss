@@ -61,11 +61,6 @@ a{
   }
 }
 
-.devise_wrapper {
-  margin: 0 auto;
-  width: 45%;
-}
-
 .buttons {
   border: 1px solid $highlight;
   padding: .5em 1em;
@@ -111,6 +106,7 @@ a{
     .sign_up {
       border: 2px solid $highlight;
       padding: .35em;
+      border-radius: 15px;
     }
     a {
       margin-left: 1em;
