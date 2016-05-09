@@ -129,14 +129,24 @@ a{
 .title_section {
   .title {
     border-bottom: 1px solid $border-color;
-    color: $highlight;
-    font-size: 2.5em;
+    color: $text;
     text-transform: uppercase;
     padding: 0 0 20px 0;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
   }
   .date {
-      text-align: right;
-      padding-top: 1em;
+    display: inline-block;
+    color: white;
+  }
+  .links {
+    display: inline-block;
+    font-size: 1em;
+    margin-left: 6em;
+    a {
+      padding: 4px;
+    }
   }
   #description {
     display: none;
@@ -147,9 +157,11 @@ a{
 
 #question_section {
   .event_count {
+    text-transform: uppercase;
     margin: 0;
-    padding-bottom: 1em;
+    padding: 1em 0;
     border-bottom: 2px solid $border-color;
+    color: white;
   }
   #question_container {
     padding:1em 4em 2em 4em;

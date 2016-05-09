@@ -2,11 +2,12 @@
   %section.title_section
     %h1.title
       = @event.title
-    %p.date
+    .date
       Submitted #{time_ago_in_words(@event.created_at)} ago
-      = link_to 'Edit', edit_event_path, class: 'buttons'
-      = link_to 'Delete', event_path, method: :delete, data: {confirm: 'Are you sure?'}, class: 'buttons'
-      = link_to 'View description', '#', id: 'description-link', class: 'buttons'
+    .links
+      = link_to 'Edit', edit_event_path
+      = link_to 'Delete', event_path, method: :delete, data: {confirm: 'Are you sure?'}
+      = link_to 'View description', '#', id: 'description-link'
     %br
     %p#description
       = @event.description
