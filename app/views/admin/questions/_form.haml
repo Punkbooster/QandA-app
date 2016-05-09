@@ -1,3 +1,3 @@
-= simple_form_for([@event, @event.questions.build]) do |f|
-	= f.input :content, label: 'Your question:'
+= simple_form_for [@event, @event.questions.build], remote: true do |f|
+	= f.input :content, label: 'Your question:', id: 'question_content'
 	= f.submit class: 'submit_btn'

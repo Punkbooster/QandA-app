@@ -1,5 +1,4 @@
 %h1 All events:
 - @events.each do |event|
   %p= link_to event.title, [:admin, event], class: 'button'
-.buttons
-  = link_to "Create event", new_admin_event_path, class: 'btn btn-primary'
+= link_to "Create event", new_admin_event_path, class: 'buttons'

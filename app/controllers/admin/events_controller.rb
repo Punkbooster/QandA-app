@@ -7,7 +7,7 @@ class Admin::EventsController < Admin::BaseController
   end
 
   def new
-    @event = current_user.events.build
+    @event = current_admin.events.build
   end
 
   def show
@@ -36,7 +36,7 @@ class Admin::EventsController < Admin::BaseController
 
   def destroy
     @event.destroy
-    redirect_to root_path
+    redirect_to admin_root_path
   end
 
   private

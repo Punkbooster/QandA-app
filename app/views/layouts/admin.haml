@@ -11,15 +11,14 @@
     %header#top_header.clearfix
       .wrapper
         .logo
-          = current_admin.email
           = link_to "Q&A platform", admin_root_path
         %nav#main_nav
           = link_to 'My Events', admin_events_path
           = link_to 'New Event', new_admin_event_path
-          = link_to 'Sign Out', destroy_admin_session_path, method: :delete
-          = link_to 'Sign Up', new_admin_registration_path, class: 'sign_up'
-          = link_to 'Log In', new_admin_session_path
+          = link_to 'Sign Out Admin', destroy_admin_session_path, method: :delete
     .wrapper
       = yield
       %p.notice= notice
       %p.alert= alert
+      %p You logged in as:
+      = current_admin.email
