@@ -17,7 +17,7 @@
       = @event.questions.count
       ='Question'.pluralize(@event.questions.count)
     #questions
-      = render @event.questions
+      = render @event.questions.sort_by {|n| n.score}.reverse
 
     #question-form
       %h1 New Question
