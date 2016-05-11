@@ -275,6 +275,54 @@ a{
   }
 }
 
+#edit_question {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em 0;
+    text-transform: uppercase;
+  }
+  label {
+    color: $text_main;
+  }
+  #event_title {
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  #event_description {
+    height: 10em;
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  input[type="submit"] {
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+    width: 32%;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    color: $text_main;
+    margin-bottom: 1em;
+    &:hover {
+      background: $text_main;
+      color: white;
+    }
+  }
+}
+
 //- - - - - - - - - - Index Events Section - - - - - - - - - - -
 
 section#index_events {
