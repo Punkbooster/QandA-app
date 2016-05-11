@@ -287,6 +287,80 @@ a{
   label {
     color: $text_main;
   }
+  #question_content {
+    height: 10em;
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  input[type="submit"] {
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+    width: 32%;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    color: $text_main;
+    margin-bottom: 1em;
+    &:hover {
+      background: $text_main;
+      color: white;
+    }
+  }
+}
+
+//- - - - - - - - - - Events Styles - - - - - - - - - - -
+
+section#index_events {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(250,250,250, .3);
+  }
+  .index_row {
+    border-bottom: 1px solid rgba(250,250,250, .3);
+  }
+  .event_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 1.5em 0 1.5em 0;
+    a {
+    	text-decoration: none;
+    	color: white !important;
+    	transition: all .4s ease-in-out;
+    	&:hover {
+    		opacity: 0.4;
+    		border-radius: 15px;
+    		padding: 10px;
+        background: black;
+    	}
+    }
+  }
+}
+
+#edit_event {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em 0;
+    text-transform: uppercase;
+  }
+  label {
+    color: $text_main;
+  }
   #event_title {
     width: 100%;
     background: rgba(250,250,250,.4);
@@ -323,40 +397,6 @@ a{
   }
 }
 
-//- - - - - - - - - - Index Events Section - - - - - - - - - - -
-
-section#index_events {
-  h1 {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
-    padding: 1em 0;
-    border-bottom: 1px solid rgba(250,250,250, .3);
-  }
-  .index_row {
-    border-bottom: 1px solid rgba(250,250,250, .3);
-  }
-  .event_title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 1.5em 0 1.5em 0;
-    a {
-    	text-decoration: none;
-    	color: white !important;
-    	transition: all .4s ease-in-out;
-    	&:hover {
-    		opacity: 0.4;
-    		border-radius: 15px;
-    		padding: 10px;
-        background: black;
-    	}
-    }
-  }
-}
-
 //- - - - - - - - - - Log in Form Styles - - - - - - - - - - -
 
 #log_in_form {
@@ -387,6 +427,81 @@ section#index_events {
     border-radius: 4px;
     padding: 1em 2em;
   }
+  input[type="submit"] {
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+    width: 32%;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    color: $text_main;
+    margin-bottom: 1em;
+    &:hover {
+      background: $text_main;
+      color: white;
+    }
+  }
+}
+
+//- - - - - - - - - - Sign Up Form Styles - - - - - - - - - - -
+
+#sign_up_form {
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em 0;
+    text-transform: uppercase;
+  }
+  label {
+    color: $text_main;
+  }
+  #user_email {
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  #user_password {
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  #user_password_confirmation {
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  input[type="submit"] {
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+    width: 32%;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    color: $text_main;
+    margin-bottom: 1em;
+    &:hover {
+      background: $text_main;
+      color: white;
+    }
+  }
+
   input[type="submit"] {
     background: rgba(250,250,250,.4);
     outline: none;

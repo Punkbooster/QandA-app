@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
   def update
     if @question.update(question_params)
       redirect_to event_path(@event)
+      flash[:notice] = "Question successfully updated!"
     else
       render 'edit'
     end

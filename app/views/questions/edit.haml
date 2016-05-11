@@ -1,5 +1,7 @@
-%h1 Edit question:
+.container
+	#edit_question
+		%h1 Edit Question
 
-=simple_form_for ([@event, @question]) do |f|
-	= f.input :content
-	= f.submit
+		=simple_form_for ([@event, @question]) do |f|
+			= f.input :content
+			= f.submit
