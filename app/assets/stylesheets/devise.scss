@@ -1,44 +1,8 @@
-// Place all the styles related to the Events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 @import 'variables.scss';
 
-//- - - - - - - - - - Event Section - - - - - - - - - - -
+//- - - - - - - - - - Log in Form Styles - - - - - - - - - - -
 
-.title_section {
-  .title {
-    border-bottom: 1px solid $border-color;
-    color: $text;
-    text-transform: uppercase;
-    padding: 0 0 20px 0;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
-  }
-  #description {
-    color: black;
-  }
-  .date {
-    display: inline-block;
-    color: $text_main;
-  }
-  .links {
-    display: inline-block;
-    font-size: 1em;
-    margin-left: 6em;
-    a {
-      padding: 4px;
-    }
-  }
-  #description {
-    display: none;
-  }
-}
-
-//- - - - - - - - - - Event Form - - - - - - - - - - -
-
-#event_form {
+#log_in_form {
   h1 {
     margin: 0 auto;
     text-align: center;
@@ -50,8 +14,7 @@
   label {
     color: $text_main;
   }
-  #event_title {
-    height: 3em;
+  #user_email {
     width: 100%;
     background: rgba(250,250,250,.4);
     outline: none;
@@ -59,9 +22,7 @@
     border-radius: 4px;
     padding: 1em 2em;
   }
-
-  #event_description {
-    height: 10em;
+  #user_password {
     width: 100%;
     background: rgba(250,250,250,.4);
     outline: none;
@@ -88,41 +49,9 @@
   }
 }
 
-//- - - - - - - - - - Events Styles - - - - - - - - - - -
+//- - - - - - - - - - Sign Up Form Styles - - - - - - - - - - -
 
-section#index_events {
-  h1 {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 700;
-    padding: 1em 0;
-    border-bottom: 1px solid rgba(250,250,250, .3);
-  }
-  .index_row {
-    border-bottom: 1px solid rgba(250,250,250, .3);
-  }
-  .event_title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 1.5em 0 1.5em 0;
-    a {
-    	text-decoration: none;
-    	color: white !important;
-    	transition: all .4s ease-in-out;
-    	&:hover {
-    		opacity: 0.4;
-    		border-radius: 15px;
-    		padding: 10px;
-        background: black;
-    	}
-    }
-  }
-}
-
-#edit_event {
+#sign_up_form {
   h1 {
     margin: 0 auto;
     text-align: center;
@@ -134,7 +63,7 @@ section#index_events {
   label {
     color: $text_main;
   }
-  #event_title {
+  #user_email {
     width: 100%;
     background: rgba(250,250,250,.4);
     outline: none;
@@ -142,8 +71,7 @@ section#index_events {
     border-radius: 4px;
     padding: 1em 2em;
   }
-  #event_description {
-    height: 10em;
+  #user_password {
     width: 100%;
     background: rgba(250,250,250,.4);
     outline: none;
@@ -151,6 +79,32 @@ section#index_events {
     border-radius: 4px;
     padding: 1em 2em;
   }
+  #user_password_confirmation {
+    width: 100%;
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 1em 2em;
+  }
+  input[type="submit"] {
+    background: rgba(250,250,250,.4);
+    outline: none;
+    border: none;
+    height: 2.5em;
+    border-radius: 4px;
+    width: 32%;
+    display: inline-block;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    color: $text_main;
+    margin-bottom: 1em;
+    &:hover {
+      background: $text_main;
+      color: white;
+    }
+  }
+
   input[type="submit"] {
     background: rgba(250,250,250,.4);
     outline: none;

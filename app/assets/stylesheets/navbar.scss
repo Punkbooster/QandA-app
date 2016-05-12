@@ -1,0 +1,37 @@
+@import 'variables.scss';
+
+//- - - - - - - - - - Header Styles - - - - - - - - - - -
+
+#top_header {
+  background-color: white;
+  padding: 1.5em 0;
+  .logo {
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.15em;
+    font-weight: 700;
+  }
+  #main_nav {
+    float: right;
+    font-size: 1em;
+    padding-top: 0.1em;
+    .sign_up {
+      border: 2px solid $highlight;
+      padding: .35em;
+      border-radius: 15px;
+    }
+    a {
+      margin-left: 1em;
+      color: $secondary !important;
+    }
+  }
+}
+
+//- - - - - - - - - - Top Styles - - - - - - - - - - -
+
+.top_text {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1em;
+}

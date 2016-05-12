@@ -1,6 +1,6 @@
 .container
   %section#index_events
-    %h1 EVENTS:
+    %h1 EVENTS
     - @events.each do |event|
       .index_row.clearfix
         %h2.event_title= link_to event.title, event
