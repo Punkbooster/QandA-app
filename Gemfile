@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'acts_as_votable'
+gem 'pg'
 
 group :development, :test do
   gem 'byebug'

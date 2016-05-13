@@ -33,5 +33,9 @@
   width: 50%;
   margin: 0 auto;
   text-align: center;
-  font-size: 1em;
+  h1 {
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
 }
