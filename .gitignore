@@ -15,8 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
-# ignore databes
-/config/databse.yml
+# ignore database
+/config/database.yml
 
 # Ignore application configuration
 /config/application.yml
