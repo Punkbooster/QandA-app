@@ -10,6 +10,9 @@
     text-transform: uppercase;
     font-size: 1.15em;
     font-weight: 700;
+    a {
+      color: $text_main !important;
+    }
   }
   #main_nav {
     float: right;
