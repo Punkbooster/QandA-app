@@ -5,8 +5,15 @@ class QuestionsController < ApplicationController
   def create
     @question = @event.questions.create(question_params)
     @question.user_id = current_user.id if current_user
+    @question.save
     respond_to do |format|
-      format.html { redirect_to event_path(@event) }
+      format.html {
+        if @question.save
+    			redirect_to event_path(@event)
+    		else
+    			render 'new'
+    		end
+      }
       format.js { render layout: false } # render questions/create.js.erb
     end
   end
@@ -16,18 +23,21 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to event_path(@event)
-      flash[:notice] = "Question successfully updated!"
+      flash[:alert] = "Question successfully updated!"
     else
       render 'edit'
     end
   end
 
   def destroy
-    @question.destroy
-    respond_to do |format|
-      format.html { redirect_to event_path(@event) }
-      format.js { render layout: false } # JavaScript response
+    if @question.user != current_user
+      flash[:notice] = "Can't delete this question."
+    else
+      @question.destroy
+      respond_to do |format|
+        format.html { redirect_to event_path(@event) }
+        format.js { render layout: false } # JavaScript response
+      end
     end
   end
 

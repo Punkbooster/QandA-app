@@ -1,11 +1,13 @@
 #question_container
 	%p
 		= question.content
+		= question.user_id.inspect
 
 	#votes
 		= link_to "", like_event_question_path(@event, question), method: :put,class:'glyphicon glyphicon-thumbs-up'
 		= question.score
 		= 'Vote'.pluralize(question.score)
+
 
 	.links
 		= link_to "Edit", edit_event_question_path(question.event, question), class: "button"

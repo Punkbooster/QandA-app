@@ -23,8 +23,8 @@ Event.create!([
   ])
 
 Question.create!([
-  { id: 1, event_id: 1, content: "Whata heck was that?" },
-  { id: 2, event_id: 1, content: "Is it a perspective idea?" }
+  { id: 1, event_id: 1, content: "Whata heck was that?", user_id: 1 },
+  { id: 2, event_id: 1, content: "Is it a perspective idea?", user_id: 2 }
   ])
 
 p "Created #{User.count} users"
